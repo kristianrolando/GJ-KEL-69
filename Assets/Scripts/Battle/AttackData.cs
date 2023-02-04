@@ -11,7 +11,7 @@ namespace GameJam.Battle
         // Variables
         //==============================================================================
         private EntityStatus entityStatus;
-        public GameObject Attacker;
+        [HideInInspector] public GameObject Attacker;
         public float Damage;
 
         [Header("Multipliers")]
@@ -48,8 +48,9 @@ namespace GameJam.Battle
 
         private void CalculatePhysical()
         {
-            float physicalResistance = entityStatus.AttackTarget.Armour.PhysicalResistance;
-            Damage = entityStatus.Weapon.PhysicalDamage - physicalResistance;
+            float targetPhysicalResistance = entityStatus.AttackTarget.Armour.PhysicalResistance + entityStatus.Race.PhysicalDefense;
+            float attackerPhysicalDamage = entityStatus.Weapon.PhysicalDamage + entityStatus.Race.PhysicalAttack;
+            Damage = attackerPhysicalDamage - targetPhysicalResistance;
         }
 
 

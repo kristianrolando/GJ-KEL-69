@@ -15,5 +15,8 @@ namespace GameJam.Battle
         [SerializeField] public WeaponType Type;
         [SerializeField] public AttackType AttackType;
         [SerializeField] public float PhysicalDamage;
+        [SerializeField] public float Accuracy;
+        [Header("Only fill if weapon has projectile")]
+        [SerializeField] public GameObject Projectile;
     }
 }
