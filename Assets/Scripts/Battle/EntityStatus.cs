@@ -16,9 +16,14 @@ namespace GameJam.Battle
         private float maxHealthPoint;
         [SerializeField] public RaceSO Race;
         [HideInInspector] public Animator Animator;
-        [SerializeField] public EntityStatus AttackTarget;
         [SerializeField] public WeaponSO Weapon;
         [SerializeField] public ArmourSO Armour;
+
+        [Header("Mandatory Object Attachments")]
+        [SerializeField] public SpriteRenderer RaceSlot;
+        [SerializeField] public SpriteRenderer WeaponSlot;
+        [SerializeField] public SpriteRenderer ArmourSlot;
+        [SerializeField] public EntityStatus AttackTarget;
         [SerializeField] private Transform weaponTransform;
         [SerializeField] TextMeshPro damageText;
         [SerializeField] Slider healthSlider;

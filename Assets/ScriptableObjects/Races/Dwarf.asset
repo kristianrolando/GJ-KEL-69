@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dwarf
   m_EditorClassIdentifier: 
   Name: Dwarf
-  raceSprite: {fileID: 21300000, guid: 5415ba81cac7aea498ab35d191e9789a, type: 3}
+  raceSprite: {fileID: 21300000, guid: 4b05e7ac41e873e4ab26d40c93dc2937, type: 3}
   HealthPoint: 2400
   PhysicalAttack: 200
   MagicAttack: 0

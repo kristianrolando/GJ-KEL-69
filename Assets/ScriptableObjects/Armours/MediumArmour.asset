@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbec77c9f28543d4387294f3127d985b, type: 3}
-  m_Name: LightArmour
+  m_Name: MediumArmour
   m_EditorClassIdentifier: 
-  Name: Light Armour
-  armourSprite: {fileID: 21300000, guid: ab505db1f13083c448a1ce032dda0d5b, type: 3}
-  Type: 1
+  Name: Medium Armour
+  armourSprite: {fileID: 21300000, guid: 8f215ecccf2184e458989f1c548ffc7b, type: 3}
+  Type: 0
   Weight: 0
-  PhysicalResistance: 3
+  PhysicalResistance: 5

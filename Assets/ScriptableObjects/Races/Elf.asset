@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Elf
   m_EditorClassIdentifier: 
   Name: Elf
+  raceSprite: {fileID: 21300000, guid: 311dfd8a65e9e3c4ea21fb1f96888f7c, type: 3}
   HealthPoint: 1400
   PhysicalAttack: 110
   MagicAttack: 0

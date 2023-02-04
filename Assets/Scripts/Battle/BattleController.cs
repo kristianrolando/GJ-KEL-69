@@ -24,6 +24,13 @@ namespace GameJam.Battle
         //==============================================================================
         // Functions
         //==============================================================================
+        private void Start()
+        {
+            StageController.InitiateStage(player, enemy);
+        }
+
+
+
         private void Update()
         {
             PlayTurn();

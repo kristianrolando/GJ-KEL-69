@@ -56,6 +56,7 @@ namespace GameJam.Battle
             float targetPhysicalResistance = entityStatus.AttackTarget.Armour.PhysicalResistance + entityStatus.Race.PhysicalDefense;
             float attackerPhysicalDamage = entityStatus.Weapon.PhysicalDamage + entityStatus.Race.PhysicalAttack;
             Damage = attackerPhysicalDamage - targetPhysicalResistance;
+            if (Damage < 0) Damage = 1;
 
             damageType = DamageType.Physical;
         }

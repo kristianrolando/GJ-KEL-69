@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Orc
   m_EditorClassIdentifier: 
   Name: Orc
+  raceSprite: {fileID: 21300000, guid: ebe377b01ea75dd4d93fd6160c8cd61b, type: 3}
   HealthPoint: 3200
   PhysicalAttack: 460
   MagicAttack: 0
