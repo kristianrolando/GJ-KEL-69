@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Crossbow
   m_EditorClassIdentifier: 
   Name: Crossbow
+  weaponSprite: {fileID: 21300000, guid: 8a060348f47500d4f85a838bf735d3de, type: 3}
   Type: 1
   AttackType: 2
   PhysicalDamage: 0
+  MagicDamage: 0
   Accuracy: 0.9
+  spriteFixedPosition: {x: 1.3000002, y: -0.71000004, z: 0}
+  spriteFixedRotation: {x: 0.028637411, y: 0.019330064, z: 0.31724897, w: 0.9477127}
   Projectile: {fileID: 3103277865896296911, guid: 403af109d4c211646a5930bc202db4bf, type: 3}

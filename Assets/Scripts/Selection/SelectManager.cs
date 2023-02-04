@@ -14,6 +14,7 @@ namespace GJ.Selection
         [SerializeField] GameObject hintEnemy;
         [SerializeField] GameObject selectionMenu;
         [SerializeField] GameObject[] battleObj;
+        [SerializeField] GameObject playerModel;
 
 
         enum PageState
@@ -76,8 +77,15 @@ namespace GJ.Selection
                 {
                     battleObj[i].SetActive(true);
                 }
+
+                DeactivatePlayerModel();
             }
 
+        }
+
+        void DeactivatePlayerModel()
+        {
+            playerModel.SetActive(false);
         }
     }
 }

@@ -11,9 +11,6 @@ namespace GameJam.Battle
         //==============================================================================
         // Functions
         //==============================================================================
-        
-
-
         public static void OnPlayerDeath()
         {
             Debug.Log("GAME OVER");
@@ -66,4 +63,3 @@ namespace GameJam.Battle
         }
     }
 }
-

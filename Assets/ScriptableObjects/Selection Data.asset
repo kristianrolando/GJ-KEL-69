@@ -24,53 +24,67 @@ MonoBehaviour:
   - nameBundle: Human
     weaponType:
     - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
+    - {fileID: 11400000, guid: c7cf4e4d23429ef46aab066a37419461, type: 2}
     - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
+    - {fileID: 11400000, guid: f94b7c5e843b5314a9bebef03668fcb1, type: 2}
+    - {fileID: 11400000, guid: 217a0725eac245546a58f99cbd8ef229, type: 2}
   - nameBundle: Elf
     weaponType:
     - {fileID: 11400000, guid: c7cf4e4d23429ef46aab066a37419461, type: 2}
-    - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
-    - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
+    - {fileID: 11400000, guid: 217a0725eac245546a58f99cbd8ef229, type: 2}
   - nameBundle: Goblin
     weaponType:
     - {fileID: 11400000, guid: 217a0725eac245546a58f99cbd8ef229, type: 2}
-    - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
+    - {fileID: 11400000, guid: c7cf4e4d23429ef46aab066a37419461, type: 2}
+    - {fileID: 11400000, guid: f94b7c5e843b5314a9bebef03668fcb1, type: 2}
   - nameBundle: Orc
     weaponType:
     - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
-    - {fileID: 11400000, guid: f94b7c5e843b5314a9bebef03668fcb1, type: 2}
     - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
   - nameBundle: Dwarf
     weaponType:
+    - {fileID: 11400000, guid: 217a0725eac245546a58f99cbd8ef229, type: 2}
     - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
-    - {fileID: 11400000, guid: c7cf4e4d23429ef46aab066a37419461, type: 2}
     - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
   selectionWeapon:
   - nameBundle: Axe
     weapon:
-    - {fileID: 11400000, guid: f3a939f61aad30f4b9982d80b913cab2, type: 2}
-    - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+    - {fileID: 11400000, guid: 6f451dffe39497f40a793e702c1195e1, type: 2}
+    - {fileID: 11400000, guid: f419bf200acba49489dd9c048893fe2a, type: 2}
   - nameBundle: Bow
     weapon:
     - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
-    - {fileID: 11400000, guid: 8a7f5e90b5348004fa4aff009b9ee432, type: 2}
+    - {fileID: 11400000, guid: 025bb9222ac2c564f96be353798e5ee3, type: 2}
   - nameBundle: Hammer
     weapon:
-    - {fileID: 11400000, guid: 8a7f5e90b5348004fa4aff009b9ee432, type: 2}
-    - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+    - {fileID: 11400000, guid: 2b39e818593d1604b8b1d5122cad455c, type: 2}
+    - {fileID: 11400000, guid: d5dc8d60cb5c3c0408b6906a0d5d1def, type: 2}
   - nameBundle: Spear
     weapon:
-    - {fileID: 11400000, guid: f3a939f61aad30f4b9982d80b913cab2, type: 2}
-    - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+    - {fileID: 11400000, guid: 90b46cefbde85be43992cd6ffb4ff2db, type: 2}
+    - {fileID: 11400000, guid: b27acfe9d4a8c3b4e9c27047f669b41f, type: 2}
   - nameBundle: Sword
     weapon:
     - {fileID: 11400000, guid: 8a7f5e90b5348004fa4aff009b9ee432, type: 2}
     - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
   selectionArmour:
-  - nameBundle: claws
+  - nameBundle: battleaxe
     armour:
     - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
   - nameBundle: crossbow
+    armour:
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
+  - nameBundle: greatsword
+    armour:
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
+  - nameBundle: greatsword
+    armour:
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
+  - nameBundle: greatsword
     armour:
     - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}

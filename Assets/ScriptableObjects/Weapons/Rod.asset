@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Rod
   m_EditorClassIdentifier: 
   Name: Rod
+  weaponSprite: {fileID: 21300000, guid: 228877efdac31cc42a298b6a82d35e28, type: 3}
   Type: 1
   AttackType: 3
   PhysicalDamage: 0
   MagicDamage: 240
   Accuracy: 0.8
+  spriteFixedPosition: {x: 1.46, y: 0.64, z: 0}
+  spriteFixedRotation: {x: 0.0343383, y: 0.0038257437, z: -0.15898907, w: 0.9866756}
   Projectile: {fileID: 0}
