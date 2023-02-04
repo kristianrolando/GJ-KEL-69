@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3103277865896296910}
   - component: {fileID: 3103277865896296906}
   m_Layer: 0
-  m_Name: Bolt
+  m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 199aafb293ada224db5480403b8b4a2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7afc8cdff3c030d49b15bc32b551dc02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,9 +121,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: -3.31}
+  m_Offset: {x: 0.01, y: -0.2}
   serializedVersion: 2
-  m_Radius: 0.27565068
+  m_Radius: 2.0566933
 --- !u!114 &3103277865896296906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,4 +138,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rb: {fileID: 0}
   AttackTarget: {fileID: 0}
-  Damage: 60
+  Damage: 80
+  TravelSpeed: 700

@@ -1,36 +1,33 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace GameJam.Battle
 {
     /// <summary>
-    /// Contains single attack data.
+    /// Handles the battle gameplay.
     /// </summary>
-    public class Projectile : MonoBehaviour
+    public class StageController : MonoBehaviour
     {
         //==============================================================================
         // Variables
         //==============================================================================
-        [HideInInspector] public Rigidbody2D Rb;
-        [HideInInspector] public EntityStatus AttackTarget;
-        [SerializeField] public DamageData damageData;
-        [SerializeField] public float TravelSpeed = 500;
 
 
 
         //==============================================================================
         // Functions
         //==============================================================================
-        private void Awake()
+        public static void OnPlayerDeath()
         {
-            Rb = gameObject.GetComponent<Rigidbody2D>();
+            Debug.Log("GAME OVER");
         }
 
 
 
-        private void OnTriggerEnter2D(Collider2D collider) 
+        public static void OnEnemyDeath()
         {
-            AttackTarget.TakeDamage(damageData);
-            Destroy(gameObject);
+            Debug.Log("PREPARING NEXT STAGE");
         }
     }
 }

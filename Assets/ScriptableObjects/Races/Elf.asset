@@ -18,4 +18,4 @@ MonoBehaviour:
   MagicAttack: 0
   PhysicalDefense: 60
   MagicDefense: 60
-  EvadeChance: 0.8
+  Evasion: 0.8
