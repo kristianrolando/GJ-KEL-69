@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb182e45f5edf094aa3c3d3f6177c47b, type: 3}
+  m_Name: Selection Data
+  m_EditorClassIdentifier: 
+  totalSelection: 4
+  selectionRace:
+    race:
+    - {fileID: 11400000, guid: 71dc63243f0e1ba4885eb5aae06abd60, type: 2}
+    - {fileID: 11400000, guid: e478375124f78494dbb850fb584ce829, type: 2}
+    - {fileID: 11400000, guid: 86d5273f6006a2b47b4b90fc193b5525, type: 2}
+    - {fileID: 11400000, guid: 7afb9af2827e43c44af69cd95701250c, type: 2}
+    - {fileID: 11400000, guid: 25718e8d184676b4eb2d1711bde9a5a2, type: 2}
+  selectionWeaponType:
+  - nameBundle: Human
+    weaponType:
+    - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
+    - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
+  - nameBundle: Elf
+    weaponType:
+    - {fileID: 11400000, guid: c7cf4e4d23429ef46aab066a37419461, type: 2}
+    - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
+    - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
+  - nameBundle: Goblin
+    weaponType:
+    - {fileID: 11400000, guid: 217a0725eac245546a58f99cbd8ef229, type: 2}
+    - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
+  - nameBundle: Orc
+    weaponType:
+    - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
+    - {fileID: 11400000, guid: f94b7c5e843b5314a9bebef03668fcb1, type: 2}
+    - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
+  - nameBundle: Dwarf
+    weaponType:
+    - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
+    - {fileID: 11400000, guid: c7cf4e4d23429ef46aab066a37419461, type: 2}
+    - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
+  selectionWeapon:
+  - nameBundle: Axe
+    weapon:
+    - {fileID: 11400000, guid: f3a939f61aad30f4b9982d80b913cab2, type: 2}
+    - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+  - nameBundle: Bow
+    weapon:
+    - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+    - {fileID: 11400000, guid: 8a7f5e90b5348004fa4aff009b9ee432, type: 2}
+  - nameBundle: Hammer
+    weapon:
+    - {fileID: 11400000, guid: 8a7f5e90b5348004fa4aff009b9ee432, type: 2}
+    - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+  - nameBundle: Spear
+    weapon:
+    - {fileID: 11400000, guid: f3a939f61aad30f4b9982d80b913cab2, type: 2}
+    - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+  - nameBundle: Sword
+    weapon:
+    - {fileID: 11400000, guid: 8a7f5e90b5348004fa4aff009b9ee432, type: 2}
+    - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+  selectionArmour:
+  - nameBundle: claws
+    armour:
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
+  - nameBundle: crossbow
+    armour:
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
+  - nameBundle: greatsword
+    armour:
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}

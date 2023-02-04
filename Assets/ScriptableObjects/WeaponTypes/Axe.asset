@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb182e45f5edf094aa3c3d3f6177c47b, type: 3}
-  m_Name: Selection Data
+  m_Script: {fileID: 11500000, guid: 0056b5d942e2802428910e83ceb85f7d, type: 3}
+  m_Name: Axe
   m_EditorClassIdentifier: 
-  selection: []
+  Name: axe

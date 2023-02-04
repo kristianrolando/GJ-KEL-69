@@ -10,10 +10,12 @@ namespace GJ.Selection
         [SerializeField] GameObject hintEnemy;
         [SerializeField] GameObject selectionMenu;
 
+        [SerializeField] SelectionLoad load;
+
         enum PageState
         {
             hintPage,
-            questionPage,
+            selectionPage,
             battlePage
         }
 
@@ -22,7 +24,6 @@ namespace GJ.Selection
             StatePage(PageState.hintPage);
         }
 
-
         void StatePage(PageState state)
         {
             switch(state)
@@ -30,16 +31,22 @@ namespace GJ.Selection
                 case PageState.hintPage:
                     hintEnemy.SetActive(true);
                     selectionMenu.SetActive(false);
+                    StartCoroutine(SelectionPageDelay(1f));
                     break;
-                case PageState.questionPage:
+                case PageState.selectionPage:
                     hintEnemy.SetActive(false);
                     selectionMenu.SetActive(true);
+                    load.LoadSelection();
                     break;
                 case PageState.battlePage:
                     break;
             }
         }
-
+        IEnumerator SelectionPageDelay(float time)
+        {
+            yield return new WaitForSeconds(time);
+            StatePage(PageState.selectionPage);
+        }
     }
 }
 
