@@ -79,10 +79,11 @@ namespace GameJam.Battle
 
         private void RangedAttack()
         {
+            AudioManager.Instance.PlaySfx("bow_shoot");
             Projectile projectile = Instantiate(Weapon.Projectile, weaponTransform.position, Quaternion.Euler(0, 0, 0), weaponTransform).GetComponent<Projectile>();
             projectile.AttackTarget = AttackTarget;
             projectile.damageData = damageData;
-
+            
             float travelSpeed = projectile.TravelSpeed;
 
             Vector3 positionDifference = AttackTarget.transform.position - weaponTransform.position;
@@ -123,6 +124,7 @@ namespace GameJam.Battle
             {
                 damageText.text = "Miss";
                 damageText.color = new Color(255f, 255f, 100f, damageText.color.a);
+                AudioManager.Instance.PlaySfx("miss");
             }
 
             if (_damageData.damageType == DamageType.Dodged)
@@ -141,6 +143,7 @@ namespace GameJam.Battle
             if (_damageData.damage > 0)
             {
                 Animator.SetTrigger("Hurt");
+                AudioManager.Instance.PlaySfx("hit_range");
             }
             
             damageText.gameObject.GetComponent<Animator>().SetTrigger("Hurt");

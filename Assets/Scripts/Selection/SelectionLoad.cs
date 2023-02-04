@@ -77,7 +77,8 @@ namespace GJ.Selection
             idSession++;
             if(idSession >= data.totalSelection)
             {
-                OnBattleStarted?.Invoke();
+                //OnBattleStarted?.Invoke();
+                GameObject.FindObjectOfType<SelectManager>().GetComponent<SelectManager>().ManagerBattle();
             }
         }
         public void LoadSelection()
