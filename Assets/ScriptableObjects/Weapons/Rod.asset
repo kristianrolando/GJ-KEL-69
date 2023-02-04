@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b55648d3713cf439370970bbed96ef, type: 3}
-  m_Name: Goblin
+  m_Script: {fileID: 11500000, guid: b07c4bddb66d6ac4b8c9c38dd113057b, type: 3}
+  m_Name: Rod
   m_EditorClassIdentifier: 
-  Name: Goblin
-  HealthPoint: 1000
-  PhysicalAttack: 50
-  MagicAttack: 0
-  PhysicalDefense: 30
-  MagicDefense: 30
-  Evasion: 0.95
+  Name: Rod
+  Type: 1
+  AttackType: 3
+  PhysicalDamage: 0
+  MagicDamage: 240
+  Accuracy: 0.8
+  Projectile: {fileID: 0}

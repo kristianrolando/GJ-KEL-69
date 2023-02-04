@@ -17,6 +17,7 @@ namespace GameJam.Battle
         [SerializeField] private EntityStatus player;
         [SerializeField] private EntityStatus enemy;
         [SerializeField] private GameObject attackDataPrefab;
+        [SerializeField] private GameObject attackLog;
 
 
 
@@ -26,6 +27,7 @@ namespace GameJam.Battle
         private void Update()
         {
             PlayTurn();
+            OnDeathEvent();
         }
 
 
@@ -34,7 +36,6 @@ namespace GameJam.Battle
         {
             if (turnData.Count <= 0)
             {
-                turnData = new List<AttackData>();
                 FillTurnData();
             }
 
@@ -48,12 +49,12 @@ namespace GameJam.Battle
 
         private void FillTurnData()
         {
-            AttackData playerAttack =  Instantiate(attackDataPrefab).GetComponent<AttackData>();
+            AttackData playerAttack =  Instantiate(attackDataPrefab, new Vector3(0, 0, 0), Quaternion.identity, attackLog.transform).GetComponent<AttackData>();
 
             playerAttack.SetAttributes(player);
             turnData.Add(playerAttack);
 
-            AttackData enemyAttack =  Instantiate(attackDataPrefab).GetComponent<AttackData>();
+            AttackData enemyAttack =  Instantiate(attackDataPrefab, new Vector3(0, 0, 0), Quaternion.identity, attackLog.transform).GetComponent<AttackData>();
             
             enemyAttack.SetAttributes(enemy);
             turnData.Add(enemyAttack);
@@ -68,19 +69,30 @@ namespace GameJam.Battle
             foreach (AttackData attack in turnData)
             {
                 float damage = attack.Damage;
-                attack.Attacker.GetComponent<EntityStatus>().Attack(damage);
+                DamageType damageType = attack.damageType;
+
+                DamageData damageData = new DamageData(damage, damageType);
+
+                attack.Attacker.GetComponent<EntityStatus>().Attack(damageData);
                 yield return new WaitForSeconds(1f);
             }
 
-            foreach(AttackData attack in turnData)
-            {
-                if (attack.gameObject == null)
-                {
-                    Destroy(attack.gameObject);
-                }
-            }
+            turnData.Clear();
 
             isIteratorRunning = false;
+        }
+
+
+
+        private void OnDeathEvent()
+        {
+            if (enemy.HealthPoint <= 0 || player.HealthPoint <= 0)
+            {
+                if (enemy.HealthPoint > player.HealthPoint) StageController.OnPlayerDeath();
+                else StageController.OnEnemyDeath();
+
+                gameObject.GetComponent<BattleController>().enabled = false;
+            }
         }
     }
 }

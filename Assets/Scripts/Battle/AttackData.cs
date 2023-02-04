@@ -11,8 +11,11 @@ namespace GameJam.Battle
         // Variables
         //==============================================================================
         private EntityStatus entityStatus;
-        [HideInInspector] public GameObject Attacker;
-        public float Damage;
+
+        [Header("Attack Data")]
+        [SerializeField] public float Damage;
+        [SerializeField] public DamageType damageType;
+        [SerializeField] public GameObject Attacker;
 
         [Header("Multipliers")]
         [SerializeField] private float bluntAttackMultiplier = 2f;
@@ -41,7 +44,9 @@ namespace GameJam.Battle
         private void CalculateTotalDamage()
         {
             CalculatePhysical();
-            CalculateWeaponTypeMultiplier();
+            //CalculateWeaponTypeMultiplier();
+            CalculateMiss();
+            CalculateDodge();
         }
 
 
@@ -51,6 +56,8 @@ namespace GameJam.Battle
             float targetPhysicalResistance = entityStatus.AttackTarget.Armour.PhysicalResistance + entityStatus.Race.PhysicalDefense;
             float attackerPhysicalDamage = entityStatus.Weapon.PhysicalDamage + entityStatus.Race.PhysicalAttack;
             Damage = attackerPhysicalDamage - targetPhysicalResistance;
+
+            damageType = DamageType.Physical;
         }
 
 
@@ -68,6 +75,34 @@ namespace GameJam.Battle
             if (playerAttackType == AttackType.Blunt && enemyArmourType == ArmourType.Light)
             {
                 Damage *= bluntAttackPenalty;
+            }
+        }
+
+
+
+        private void CalculateMiss()
+        {
+            float attackerAccuracy = entityStatus.Weapon.Accuracy;
+            float calculatedMiss = Random.Range(0f, 1f);
+
+            if (calculatedMiss > attackerAccuracy)
+            {
+                Damage = 0;
+                damageType = DamageType.Miss;
+            }
+        }
+
+
+
+        private void CalculateDodge()
+        {
+            float targetEvasion = entityStatus.AttackTarget.Race.Evasion - entityStatus.Weapon.Accuracy;
+            float calculatedDodged = Random.Range(0f, 1f);
+
+            if (calculatedDodged < targetEvasion)
+            {
+                Damage = 0;
+                if (damageType != DamageType.Miss) damageType = DamageType.Dodged;
             }
         }
     }

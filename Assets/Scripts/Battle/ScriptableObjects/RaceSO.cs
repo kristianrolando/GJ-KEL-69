@@ -17,6 +17,6 @@ namespace GameJam.Battle
         [SerializeField] public float MagicAttack;
         [SerializeField] public float PhysicalDefense;
         [SerializeField] public float MagicDefense;
-        [SerializeField] public float EvadeChance;
+        [SerializeField] public float Evasion;
     }
 }

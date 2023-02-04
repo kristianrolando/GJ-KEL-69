@@ -7,6 +7,7 @@ namespace GameJam.Battle
     {
         Blunt,
         Slash,
-        Pierce
+        Pierce,
+        Magic
     }
 }

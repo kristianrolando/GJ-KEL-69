@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Human
   m_EditorClassIdentifier: 
   Name: Human
-  HealthPoint: 1800
+  HealthPoint: 180
   PhysicalAttack: 40
   MagicAttack: 300
   PhysicalDefense: 60
   MagicDefense: 60
-  EvadeChance: 0.1
+  Evasion: 0.1

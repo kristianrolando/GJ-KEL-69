@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Crossbow
   Type: 1
-  AttackType: 3
+  AttackType: 2
   PhysicalDamage: 0
-  Accuracy: 0.6
+  Accuracy: 0.9
   Projectile: {fileID: 3103277865896296911, guid: 403af109d4c211646a5930bc202db4bf, type: 3}
