@@ -23,19 +23,22 @@ namespace GJ.Selection
             selectionPage,
             battlePage
         }
-        private void OnEnable()
-        {
-            SelectionLoad.OnBattleStarted += () => { StatePage(PageState.battlePage); };
-        }
-        private void OnDestroy()
-        {
-            SelectionLoad.OnBattleStarted -= () => { StatePage(PageState.battlePage); };
-        }
+        //private void OnEnable()
+        //{
+        //    SelectionLoad.OnBattleStarted += () => { StatePage(PageState.battlePage); };
+        //}
+        //private void OnDestroy()
+        //{
+        //    SelectionLoad.OnBattleStarted -= () => { StatePage(PageState.battlePage); };
+        //}
         private void Start()
         {
             StatePage(PageState.hintPage);
         }
-
+        public void ManagerBattle()
+        {
+            StatePage(PageState.battlePage);
+        }
         void StatePage(PageState state)
         {
             switch(state)
