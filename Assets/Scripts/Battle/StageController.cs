@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using GJ.Selection;
 
 namespace GameJam.Battle
@@ -18,9 +19,9 @@ namespace GameJam.Battle
 
 
 
-        public static void OnEnemyDeath()
+        public static void OnEnemyDeath(string nextScene)
         {
-            Debug.Log("PREPARING NEXT STAGE");
+            SceneManager.LoadScene(nextScene);
         }
 
 
@@ -40,6 +41,7 @@ namespace GameJam.Battle
             player.Armour = SelectionContainer.armour;
 
             SetSprites(player);
+            player.Spawn();
         }
 
 
@@ -51,6 +53,7 @@ namespace GameJam.Battle
             enemy.Armour = SelectionContainer.armour;
 
             SetSprites(enemy);
+            enemy.Spawn();
         }
 
 

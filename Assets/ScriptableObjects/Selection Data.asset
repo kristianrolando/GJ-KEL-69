@@ -70,25 +70,49 @@ MonoBehaviour:
   selectionArmour:
   - nameBundle: battleaxe
     armour:
-    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
+  - nameBundle: bow
+    armour:
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
+    - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
+  - nameBundle: claws
+    armour:
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
   - nameBundle: crossbow
     armour:
-    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
   - nameBundle: greatsword
     armour:
     - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
+  - nameBundle: halberd
+    armour:
+    - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+  - nameBundle: lance
+    armour:
+    - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  - nameBundle: greatsword
+  - nameBundle: orbs
+    armour:
+    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
+  - nameBundle: rod
+    armour:
+    - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+  - nameBundle: sledgehammer
     armour:
     - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
-    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  - nameBundle: greatsword
+    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
+  - nameBundle: throwingaxe
     armour:
-    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  - nameBundle: greatsword
+  - nameBundle: tonfa
     armour:
     - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
