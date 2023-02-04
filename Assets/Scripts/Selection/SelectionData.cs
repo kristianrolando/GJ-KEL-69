@@ -11,9 +11,9 @@ namespace GJ.Selection
         public Selection[] selection;
     }
     [System.Serializable]
-    public class Selection
+    public class SelectionRace
     {
-        
+        public 
     }
 }
 
