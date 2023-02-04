@@ -7,10 +7,14 @@ namespace GJ.Selection
 {
     public class SelectManager : MonoBehaviour
     {
-        [SerializeField] GameObject hintEnemy;
-        [SerializeField] GameObject selectionMenu;
+        [SerializeField] float timeForReadHint = 3f;
 
         [SerializeField] SelectionLoad load;
+
+        [SerializeField] GameObject hintEnemy;
+        [SerializeField] GameObject selectionMenu;
+        [SerializeField] GameObject[] battleObj;
+
 
         enum PageState
         {
@@ -18,7 +22,14 @@ namespace GJ.Selection
             selectionPage,
             battlePage
         }
-
+        private void OnEnable()
+        {
+            SelectionLoad.OnBattleStarted += () => { StatePage(PageState.battlePage); };
+        }
+        private void OnDestroy()
+        {
+            SelectionLoad.OnBattleStarted -= () => { StatePage(PageState.battlePage); };
+        }
         private void Start()
         {
             StatePage(PageState.hintPage);
@@ -31,7 +42,8 @@ namespace GJ.Selection
                 case PageState.hintPage:
                     hintEnemy.SetActive(true);
                     selectionMenu.SetActive(false);
-                    StartCoroutine(SelectionPageDelay(1f));
+                    SetActiveObjBattle(false);
+                    StartCoroutine(SelectionPageDelay(timeForReadHint));
                     break;
                 case PageState.selectionPage:
                     hintEnemy.SetActive(false);
@@ -39,6 +51,8 @@ namespace GJ.Selection
                     load.LoadSelection();
                     break;
                 case PageState.battlePage:
+                    selectionMenu.SetActive(false);
+                    SetActiveObjBattle(true);
                     break;
             }
         }
@@ -46,6 +60,24 @@ namespace GJ.Selection
         {
             yield return new WaitForSeconds(time);
             StatePage(PageState.selectionPage);
+        }
+        void SetActiveObjBattle(bool isActive)
+        {
+            if(!isActive)
+            {
+                for (int i = 0; i < battleObj.Length; i++)
+                {
+                    battleObj[i].SetActive(false);
+                }
+            }
+            else if(isActive)
+            {
+                for (int i = 0; i < battleObj.Length; i++)
+                {
+                    battleObj[i].SetActive(true);
+                }
+            }
+
         }
     }
 }

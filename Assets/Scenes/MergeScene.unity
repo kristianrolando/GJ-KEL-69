@@ -189,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &101570021
 GameObject:
@@ -255,7 +255,7 @@ Transform:
   - {fileID: 1531952012}
   - {fileID: 1073850422}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &167493806
 GameObject:
@@ -600,7 +600,7 @@ MonoBehaviour:
   Armour: {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
   weaponTransform: {fileID: 101570022}
   damageText: {fileID: 1529506515}
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 1941770833}
 --- !u!61 &234232074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -995,7 +995,7 @@ MonoBehaviour:
   Armour: {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
   weaponTransform: {fileID: 739126941}
   damageText: {fileID: 714357907}
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 1057663999}
 --- !u!212 &361347376
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1233,6 +1233,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591706886}
   m_CullTransparentMesh: 1
+--- !u!1 &654172397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654172398}
+  m_Layer: 0
+  m_Name: AttackLog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654172398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654172397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 974036085}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &689270060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,11 +1792,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894464322}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.97, y: -3.6499999, z: -10}
+  m_LocalPosition: {x: 4.97, y: -3.32, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1520104885}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951010545
@@ -1978,8 +2009,9 @@ Transform:
   m_Children:
   - {fileID: 234232077}
   - {fileID: 361347372}
+  - {fileID: 654172398}
   m_Father: {fileID: 1520104885}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986631646
 GameObject:
@@ -2185,9 +2217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103c57d6e388f0640a7985a04ef18374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeForReadHint: 3
+  load: {fileID: 1917680531}
   hintEnemy: {fileID: 1375830814}
   selectionMenu: {fileID: 1917680530}
-  load: {fileID: 1917680531}
+  battleObj:
+  - {fileID: 1520104884}
+  - {fileID: 591706886}
+  - {fileID: 689270060}
 --- !u!4 &1073850422
 Transform:
   m_ObjectHideFlags: 0
@@ -2489,7 +2526,7 @@ Transform:
   m_Children:
   - {fileID: 955316812}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375830814
 GameObject:
@@ -2733,7 +2770,7 @@ Transform:
   m_Children:
   - {fileID: 1570387434}
   m_Father: {fileID: 1520104885}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1520104884
 GameObject:
@@ -2763,11 +2800,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 894464325}
   - {fileID: 1441704317}
   - {fileID: 974036085}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1525314976
 GameObject:
@@ -3250,7 +3286,7 @@ MonoBehaviour:
   player: {fileID: 234232073}
   enemy: {fileID: 361347375}
   attackDataPrefab: {fileID: 4426786376181127115, guid: da7747bbde81cdf43a7eba5c75b6e6af, type: 3}
-  attackLog: {fileID: 0}
+  attackLog: {fileID: 654172397}
 --- !u!1 &1636758282
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ namespace GJ.Selection
 {
     public class SelectionLoad : MonoBehaviour
     {
+        public static System.Action OnBattleStarted;
+
         [SerializeField] SelectionData data;
 
         [Header("UI")]
@@ -45,16 +47,12 @@ namespace GJ.Selection
         }
         void Choice1()
         {
-            Debug.Log("button1 pressed");
-            Debug.Log("idb1 " + idB1);
             LoadDataSelectionButton(idB1);
             //next selection
             LoadSelection();
         }
         void Choice2()
         {
-            Debug.Log("button2 pressed");
-            Debug.Log("idb2 " + idB2);
             LoadDataSelectionButton(idB2);
             //next selection
             LoadSelection();
@@ -79,14 +77,13 @@ namespace GJ.Selection
             idSession++;
             if(idSession >= data.totalSelection)
             {
-                // menuju battle
+                OnBattleStarted?.Invoke();
             }
         }
         public void LoadSelection()
         {
             if (idSession >= data.totalSelection)
             {
-                Debug.Log("Run Out of selection");
                 return;
             }
 
@@ -113,7 +110,6 @@ namespace GJ.Selection
         {
             if (data.selectionRace.race.Length <= 0)
             {
-                Debug.Log("selection race kosong"); 
                 return;
             }
 
@@ -123,12 +119,6 @@ namespace GJ.Selection
             {
                 id2 = Random.Range(0, data.selectionRace.race.Length);
             }
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    id2 = Random.Range(0, data.selectionRace.race.Length);
-            //    if (id2 != id1)
-            //        break;
-            //}
             var text1 = data.selectionRace.race[id1].name;
             var text2 = data.selectionRace.race[id2].name;
             idB1 = id1;
@@ -141,7 +131,6 @@ namespace GJ.Selection
             _wType = System.Array.Find(data.selectionWeaponType, wType => wType.nameBundle.ToLower() == SelectionContainer.race.Name.ToLower());
             if (_wType.weaponType.Length <= 0)
             {
-                Debug.Log("Selection Weapon Type Kosong");
                 return;
             }
 
@@ -164,7 +153,6 @@ namespace GJ.Selection
             _weapon = System.Array.Find(data.selectionWeapon, weapon => weapon.nameBundle.ToLower() == SelectionContainer.weaponType.Name.ToLower());
             if (_weapon.weapon.Length <= 0)
             {
-                Debug.Log("Selection Weapon Kosong");
                 return;
             }
 
@@ -187,7 +175,6 @@ namespace GJ.Selection
             _armour = System.Array.Find(data.selectionArmour, armour => armour.nameBundle.ToLower() == SelectionContainer.weapon.name.ToLower());
             if (_armour.armour.Length <= 0)
             {
-                Debug.Log("Selection armour Kosong");
                 return;
             }
 
