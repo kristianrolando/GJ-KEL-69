@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb182e45f5edf094aa3c3d3f6177c47b, type: 3}
+  m_Name: Selection Data
+  m_EditorClassIdentifier: 
+  selection:
+  - name: 1
+    buttonText: 1
+    sprite: {fileID: 0}
+    effect: 0
+    hp: 0
+    attack: 0
+    deffend: 0
+    selection:
+    - name: 1 1
+      buttonText: 1 1
+      sprite: {fileID: 0}
+      effect: 0
+      hp: 0
+      attack: 0
+      deffend: 0
+      selection: []
+    - name: 1 2
+      buttonText: 1 2
+      sprite: {fileID: 0}
+      effect: 0
+      hp: 0
+      attack: 0
+      deffend: 0
+      selection: []
+  - name: 2
+    buttonText: 2
+    sprite: {fileID: 0}
+    effect: 0
+    hp: 0
+    attack: 0
+    deffend: 0
+    selection:
+    - name: 2 1
+      buttonText: 
+      sprite: {fileID: 0}
+      effect: 0
+      hp: 0
+      attack: 0
+      deffend: 0
+      selection: []
+    - name: 2 2
+      buttonText: 
+      sprite: {fileID: 0}
+      effect: 0
+      hp: 0
+      attack: 0
+      deffend: 0
+      selection: []
+    - name: 2 3
+      buttonText: 
+      sprite: {fileID: 0}
+      effect: 0
+      hp: 0
+      attack: 0
+      deffend: 0
+      selection: []
+  - name: 3
+    buttonText: 3
+    sprite: {fileID: 0}
+    effect: 0
+    hp: 0
+    attack: 0
+    deffend: 0
+    selection:
+    - name: 3 1
+      buttonText: 3 1
+      sprite: {fileID: 0}
+      effect: 0
+      hp: 0
+      attack: 0
+      deffend: 0
+      selection: []
+    - name: 3 2
+      buttonText: 3 2
+      sprite: {fileID: 0}
+      effect: 0
+      hp: 0
+      attack: 0
+      deffend: 0
+      selection: []
+    - name: 3 3
+      buttonText: 3 3
+      sprite: {fileID: 0}
+      effect: 0
+      hp: 0
+      attack: 0
+      deffend: 0
+      selection: []
