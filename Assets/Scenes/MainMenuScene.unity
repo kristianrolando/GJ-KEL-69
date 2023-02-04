@@ -2170,6 +2170,15 @@ MonoBehaviour:
   - name: button_press
     clip: {fileID: 8300000, guid: 115a6f79342b731499de06e2924cd7bf, type: 3}
     source: {fileID: 0}
+  - name: bow_shoot
+    clip: {fileID: 8300000, guid: 61a882f627587674d84e91020705367a, type: 3}
+    source: {fileID: 0}
+  - name: miss
+    clip: {fileID: 8300000, guid: 9a4a27b10eebcea45ab2ef8b8ab7b23a, type: 3}
+    source: {fileID: 0}
+  - name: hit_range
+    clip: {fileID: 8300000, guid: aabddd438fd708444b751be8e511d08c, type: 3}
+    source: {fileID: 0}
   soundBgm:
   - name: bgm1
     clip: {fileID: 8300000, guid: c6e016cfc843367449b3f4afe5bddd8c, type: 3}
