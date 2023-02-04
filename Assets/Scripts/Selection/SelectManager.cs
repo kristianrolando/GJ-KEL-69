@@ -78,6 +78,7 @@ namespace GJ.Selection
                     battleObj[i].SetActive(true);
                 }
 
+                AudioManager.Instance.PlayBgm("bgm1");
                 DeactivatePlayerModel();
             }
 

@@ -35,7 +35,7 @@ namespace GameJam.Battle
         //==============================================================================
         // Functions
         //==============================================================================
-        private void Awake()
+        public void Spawn()
         {
             Animator = gameObject.GetComponent<Animator>();
             HealthPoint = Race.HealthPoint;

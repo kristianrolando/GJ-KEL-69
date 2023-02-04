@@ -18,6 +18,7 @@ namespace GameJam.Battle
         [SerializeField] private EntityStatus enemy;
         [SerializeField] private GameObject attackDataPrefab;
         [SerializeField] private GameObject attackLog;
+        [SerializeField] private string gameSceneName;
 
 
 
@@ -96,7 +97,7 @@ namespace GameJam.Battle
             if (enemy.HealthPoint <= 0 || player.HealthPoint <= 0)
             {
                 if (enemy.HealthPoint > player.HealthPoint) StageController.OnPlayerDeath();
-                else StageController.OnEnemyDeath();
+                else StageController.OnEnemyDeath(gameSceneName);
 
                 gameObject.GetComponent<BattleController>().enabled = false;
             }
