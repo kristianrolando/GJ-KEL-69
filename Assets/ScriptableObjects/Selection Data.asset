@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Selection Data
   m_EditorClassIdentifier: 
   totalSelection: 4
+  questionRace: ' race race  race race  race race  race race  race race  race race 
+    race race  race race  race race '
   selectionRace:
     race:
     - {fileID: 11400000, guid: 71dc63243f0e1ba4885eb5aae06abd60, type: 2}
@@ -20,6 +22,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 86d5273f6006a2b47b4b90fc193b5525, type: 2}
     - {fileID: 11400000, guid: 7afb9af2827e43c44af69cd95701250c, type: 2}
     - {fileID: 11400000, guid: 25718e8d184676b4eb2d1711bde9a5a2, type: 2}
+  questionWeaponType: 'weapon type weapon type weapon type weapon type weapon type
+    weapon type '
   selectionWeaponType:
   - nameBundle: Human
     weaponType:
@@ -46,6 +50,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 217a0725eac245546a58f99cbd8ef229, type: 2}
     - {fileID: 11400000, guid: caae19428d7dc5244a12de4b815417a2, type: 2}
     - {fileID: 11400000, guid: 53c1b3a7d0a749449989690317ff4a03, type: 2}
+  questionWeapon: 'weapon weapon weapon weapon weapon weapon weapon weapon weapon
+    weapon weapon weapon weapon '
   selectionWeapon:
   - nameBundle: Axe
     weapon:
@@ -67,6 +73,8 @@ MonoBehaviour:
     weapon:
     - {fileID: 11400000, guid: 8a7f5e90b5348004fa4aff009b9ee432, type: 2}
     - {fileID: 11400000, guid: 8cfc909b30141a548a6d1e55eda575f6, type: 2}
+  questionArmour: 'Armour Armour Armour Armour Armour Armour Armour Armour Armour
+    Armour Armour Armour '
   selectionArmour:
   - nameBundle: battleaxe
     armour:
