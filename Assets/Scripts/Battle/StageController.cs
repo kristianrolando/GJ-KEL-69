@@ -14,13 +14,14 @@ namespace GameJam.Battle
         //==============================================================================
         public static void OnPlayerDeath()
         {
-            Debug.Log("GAME OVER");
+            SetHighScore();
         }
 
 
 
         public static void OnEnemyDeath(string nextScene)
         {
+            DataManager.playerScore += 1;
             SceneManager.LoadScene(nextScene);
         }
 
@@ -63,6 +64,21 @@ namespace GameJam.Battle
             entity.RaceSlot.sprite = entity.Race.raceSprite;
             entity.WeaponSlot.sprite = entity.Weapon.weaponSprite;
             entity.ArmourSlot.sprite = entity.Armour.armourSprite;
+        }
+
+
+
+        private static void SetHighScore()
+        {
+            if (PlayerPrefs.HasKey("highscore"))
+            {
+                if (PlayerPrefs.GetInt("highscore") < DataManager.playerScore) PlayerPrefs.SetInt("highscore", DataManager.playerScore);
+            }
+        
+            else
+            {
+                PlayerPrefs.SetInt("highscore", DataManager.playerScore);
+            }
         }
     }
 }

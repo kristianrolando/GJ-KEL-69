@@ -3,10 +3,9 @@ using UnityEngine.EventSystems;
 
 public class LittleTrollin : MonoBehaviour
 {
-    private bool isTrolledBefore = false;
+    [SerializeField] private bool isTrolledBefore = false;
     private Vector3 initialPosition;
     [SerializeField] private GameObject noButton;
-    private bool mouseHover = false;
     private PointerEventData eventData;
 
 
