@@ -11,11 +11,18 @@ namespace GJ.Selection
     {
         public int totalSelection;
 
+        [TextArea] public string questionRace;
         public SelectionRace selectionRace;
+
+        [TextArea] public string questionWeaponType;
         [Tooltip("WeaponType based of Race has been choosen")]
         public BundleWeaponType[] selectionWeaponType;
+
+        [TextArea] public string questionWeapon;
         [Tooltip("Weapon based of WeaponType has been choosen")]
         public BundleWeapon[] selectionWeapon;
+
+        [TextArea] public string questionArmour;
         [Tooltip("Armour based of Weapon has been choosen")]
         public BundleArmour[] selectionArmour;
     }

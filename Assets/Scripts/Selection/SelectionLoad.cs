@@ -16,6 +16,7 @@ namespace GJ.Selection
         [Header("UI")]
         [SerializeField] Button choiceButton1;
         [SerializeField] Button choiceButton2;
+        [SerializeField] TextMeshProUGUI questionText;
 
         [Header("Player Component")]
         [SerializeField] GameObject raceModel;
@@ -92,15 +93,19 @@ namespace GJ.Selection
             {
                 case (int)SelectionState.race:
                     LoadRace();
-                    break;
-                case (int)SelectionState.weapon:
-                    LoadWeapon();
+                    questionText.text = data.questionRace;
                     break;
                 case (int)SelectionState.weaponType:
                     LoadWeaponType();
+                    questionText.text = data.questionWeaponType;
+                    break;
+                case (int)SelectionState.weapon:
+                    LoadWeapon();
+                    questionText.text = data.questionWeapon;
                     break;
                 case (int)SelectionState.armour:
                     LoadArmour();
+                    questionText.text = data.questionArmour;
                     break;
             }
         }
@@ -120,8 +125,8 @@ namespace GJ.Selection
             {
                 id2 = Random.Range(0, data.selectionRace.race.Length);
             }
-            var text1 = data.selectionRace.race[id1].name;
-            var text2 = data.selectionRace.race[id2].name;
+            var text1 = data.selectionRace.race[id1].Hint;
+            var text2 = data.selectionRace.race[id2].Hint;
             idB1 = id1;
             idB2 = id2;
             LoadUIText(text1, text2);
@@ -141,8 +146,8 @@ namespace GJ.Selection
             {
                 id2 = Random.Range(0, _wType.weaponType.Length);
             }
-            var text1 = _wType.weaponType[id1].name;
-            var text2 = _wType.weaponType[id2].name;
+            var text1 = _wType.weaponType[id1].Hint;
+            var text2 = _wType.weaponType[id2].Hint;
 
             idB1 = id1;
             idB2 = id2;
@@ -163,8 +168,8 @@ namespace GJ.Selection
             {
                 id2 = Random.Range(0, _weapon.weapon.Length);
             }
-            var text1 = _weapon.weapon[id1].name;
-            var text2 = _weapon.weapon[id2].name;
+            var text1 = _weapon.weapon[id1].Hint;
+            var text2 = _weapon.weapon[id2].Hint;
 
             idB1 = id1;
             idB2 = id2;
@@ -173,7 +178,7 @@ namespace GJ.Selection
         void LoadArmour()
         {
             //find bundle armour based weapon has been choosen
-            _armour = System.Array.Find(data.selectionArmour, armour => armour.nameBundle.ToLower() == SelectionContainer.weapon.name.ToLower());
+            _armour = System.Array.Find(data.selectionArmour, armour => armour.nameBundle.ToLower() == SelectionContainer.weapon.Name.ToLower());
             if (_armour.armour.Length <= 0)
             {
                 return;
@@ -185,8 +190,8 @@ namespace GJ.Selection
             {
                 id2 = Random.Range(0, _armour.armour.Length);
             }
-            var text1 = _armour.armour[id1].name;
-            var text2 = _armour.armour[id2].name;
+            var text1 = _armour.armour[id1].Hint;
+            var text2 = _armour.armour[id2].Hint;
 
             idB1 = id1;
             idB2 = id2;

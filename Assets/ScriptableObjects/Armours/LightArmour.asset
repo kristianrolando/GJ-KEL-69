@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: LightArmour
   m_EditorClassIdentifier: 
   Name: Light Armour
+  Hint: 
   armourSprite: {fileID: 21300000, guid: ab505db1f13083c448a1ce032dda0d5b, type: 3}
   Type: 1
   Weight: 0
