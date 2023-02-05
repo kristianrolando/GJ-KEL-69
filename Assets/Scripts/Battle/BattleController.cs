@@ -12,7 +12,6 @@ namespace GameJam.Battle
         //==============================================================================
         // Variables
         //==============================================================================
-        public bool isGameReady = false;
         private bool isIteratorRunning = false;
         [HideInInspector] public List<AttackData> turnData = new List<AttackData>();
         [SerializeField] private EntityStatus player;
@@ -20,17 +19,15 @@ namespace GameJam.Battle
         [SerializeField] private GameObject attackDataPrefab;
         [SerializeField] private GameObject attackLog;
         [SerializeField] private string gameSceneName;
-        [SerializeField] private StageController stageController;
 
-
+        [SerializeField] GameObject gameOverPanel;
 
         //==============================================================================
         // Functions
         //==============================================================================
         private void Start()
         {
-            stageController.InitiateStage(player, enemy);
-            isGameReady = true;
+            StageController.InitiateStage(player, enemy);
         }
 
 
@@ -97,15 +94,19 @@ namespace GameJam.Battle
 
         private void OnDeathEvent()
         {
-            if (isGameReady)
+            if (enemy.HealthPoint <= 0 || player.HealthPoint <= 0)
             {
-                if (enemy.HealthPoint <= 0 || player.HealthPoint <= 0)
+                if (enemy.HealthPoint > player.HealthPoint)
                 {
-                    if (enemy.HealthPoint > player.HealthPoint) StageController.OnPlayerDeath();
-                    else StageController.OnEnemyDeath(gameSceneName);
-
-                    gameObject.GetComponent<BattleController>().enabled = false;
+                    StageController.OnPlayerDeath();
+                    gameOverPanel.SetActive(true);
                 }
+                else
+                {
+                    StageController.OnEnemyDeath(gameSceneName);
+                }
+
+                gameObject.GetComponent<BattleController>().enabled = false;
             }
         }
     }
