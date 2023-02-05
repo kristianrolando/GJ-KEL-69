@@ -37,7 +37,7 @@ namespace GJ.Selection
         }
         public void ManagerBattle()
         {
-            StartCoroutine(BattlePageDelay(2f));
+            StartCoroutine(BattlePageDelay(1f));
         }
         void StatePage(PageState state)
         {
