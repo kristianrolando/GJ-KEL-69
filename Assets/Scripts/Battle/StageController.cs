@@ -9,6 +9,8 @@ namespace GameJam.Battle
     /// </summary>
     public class StageController : MonoBehaviour
     {
+        [SerializeField] private EnemySO[] enemyPool;
+
         //==============================================================================
         // Functions
         //==============================================================================
@@ -27,7 +29,7 @@ namespace GameJam.Battle
 
 
 
-        public static void InitiateStage(EntityStatus player, EntityStatus enemy)
+        public void InitiateStage(EntityStatus player, EntityStatus enemy)
         {
             SetPlayerAttribute(player);
             SetEnemyAttribute(enemy);
@@ -35,7 +37,7 @@ namespace GameJam.Battle
 
 
 
-        public static void SetPlayerAttribute(EntityStatus player)
+        public void SetPlayerAttribute(EntityStatus player)
         {
             player.Race = SelectionContainer.race;
             player.Weapon = SelectionContainer.weapon;
@@ -47,11 +49,21 @@ namespace GameJam.Battle
 
 
 
-        public static void SetEnemyAttribute(EntityStatus enemy)
+        private EnemySO RandomizeEnemyPool()
         {
-            enemy.Race = SelectionContainer.race;
-            enemy.Weapon = SelectionContainer.weapon;
-            enemy.Armour = SelectionContainer.armour;
+            int pick = Random.Range(0, enemyPool.Length);
+            return enemyPool[pick];
+        }
+
+
+
+        public void SetEnemyAttribute(EntityStatus enemy)
+        {
+            EnemySO enemyPreset = RandomizeEnemyPool();
+
+            enemy.Race = enemyPreset.Race;
+            enemy.Weapon = enemyPreset.Weapon;
+            enemy.Armour = enemyPreset.Armour;
 
             SetSprites(enemy);
             enemy.Spawn();

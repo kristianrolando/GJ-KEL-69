@@ -12,6 +12,7 @@ namespace GameJam.Battle
         //==============================================================================
         // Variables
         //==============================================================================
+        public bool isGameReady = false;
         private bool isIteratorRunning = false;
         [HideInInspector] public List<AttackData> turnData = new List<AttackData>();
         [SerializeField] private EntityStatus player;
@@ -19,6 +20,7 @@ namespace GameJam.Battle
         [SerializeField] private GameObject attackDataPrefab;
         [SerializeField] private GameObject attackLog;
         [SerializeField] private string gameSceneName;
+        [SerializeField] private StageController stageController;
 
 
 
@@ -27,7 +29,8 @@ namespace GameJam.Battle
         //==============================================================================
         private void Start()
         {
-            StageController.InitiateStage(player, enemy);
+            stageController.InitiateStage(player, enemy);
+            isGameReady = true;
         }
 
 
@@ -94,12 +97,15 @@ namespace GameJam.Battle
 
         private void OnDeathEvent()
         {
-            if (enemy.HealthPoint <= 0 || player.HealthPoint <= 0)
+            if (isGameReady)
             {
-                if (enemy.HealthPoint > player.HealthPoint) StageController.OnPlayerDeath();
-                else StageController.OnEnemyDeath(gameSceneName);
+                if (enemy.HealthPoint <= 0 || player.HealthPoint <= 0)
+                {
+                    if (enemy.HealthPoint > player.HealthPoint) StageController.OnPlayerDeath();
+                    else StageController.OnEnemyDeath(gameSceneName);
 
-                gameObject.GetComponent<BattleController>().enabled = false;
+                    gameObject.GetComponent<BattleController>().enabled = false;
+                }
             }
         }
     }
