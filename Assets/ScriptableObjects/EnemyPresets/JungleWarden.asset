@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62e2a9aacfca3547980f5f5eb761d3c, type: 3}
   m_Name: JungleWarden
   m_EditorClassIdentifier: 
-  Name: Jungle Warden
+  Name: JungleWarden
+  Hint: 
   Race: {fileID: 11400000, guid: e478375124f78494dbb850fb584ce829, type: 2}
   Weapon: {fileID: 11400000, guid: 025bb9222ac2c564f96be353798e5ee3, type: 2}
   Armour: {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  Hint: 

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62e2a9aacfca3547980f5f5eb761d3c, type: 3}
   m_Name: ArchWizard
   m_EditorClassIdentifier: 
-  Name: Arch Wizard
+  Name: ArchWizard
+  Hint: 
   Race: {fileID: 11400000, guid: 7afb9af2827e43c44af69cd95701250c, type: 2}
   Weapon: {fileID: 11400000, guid: 79bec4fe624a86347838332f571ac808, type: 2}
   Armour: {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
-  Hint: 

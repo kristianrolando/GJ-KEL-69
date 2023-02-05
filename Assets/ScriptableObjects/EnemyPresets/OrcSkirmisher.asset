@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62e2a9aacfca3547980f5f5eb761d3c, type: 3}
   m_Name: OrcSkirmisher
   m_EditorClassIdentifier: 
-  Name: Orc Skirmisher
+  Name: OrcSkirmisher
+  Hint: 
   Race: {fileID: 11400000, guid: 25718e8d184676b4eb2d1711bde9a5a2, type: 2}
   Weapon: {fileID: 11400000, guid: 2b39e818593d1604b8b1d5122cad455c, type: 2}
   Armour: {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
-  Hint: 

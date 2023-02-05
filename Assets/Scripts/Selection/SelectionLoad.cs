@@ -178,7 +178,7 @@ namespace GJ.Selection
         void LoadArmour()
         {
             //find bundle armour based weapon has been choosen
-            _armour = System.Array.Find(data.selectionArmour, armour => armour.nameBundle.ToLower() == SelectionContainer.weapon.Name.ToLower());
+            _armour = System.Array.Find(data.selectionArmour, armour => armour.nameBundle.ToLower() == SelectionContainer.race.Name.ToLower());
             if (_armour.armour.Length <= 0)
             {
                 return;
