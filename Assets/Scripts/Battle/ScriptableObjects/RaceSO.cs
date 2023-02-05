@@ -12,6 +12,7 @@ namespace GameJam.Battle
         // Variables
         //==============================================================================
         [SerializeField] public string Name;
+        [TextArea] [SerializeField] public string Hint;
         [SerializeField] public Sprite raceSprite;
         [SerializeField] public float HealthPoint;
         [SerializeField] public float PhysicalAttack;

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Lance
   m_EditorClassIdentifier: 
   Name: Lance
+  Hint: Apakah senjata itu dikhususkan untuk menusuk ?
   weaponSprite: {fileID: 21300000, guid: ab92b5f8ca24bc54bbd9c5aeb70a00a0, type: 3}
   Type: 0
   AttackType: 2

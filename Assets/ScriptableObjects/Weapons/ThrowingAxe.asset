@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: ThrowingAxe
   m_EditorClassIdentifier: 
   Name: ThrowingAxe
+  Hint: Apakah senjata itu dilempar?
   weaponSprite: {fileID: 21300000, guid: 63b80560df9fcbb488608b26018eba49, type: 3}
   Type: 1
   AttackType: 1
   PhysicalDamage: 0
   MagicDamage: 0
   Accuracy: 0.5
-  spriteFixedPosition: {x: 0.97, y: -0.18, z: 0}
-  spriteFixedRotation: {x: 0.033122037, y: 0.009832961, z: 0.017853187, w: 0.99924344}
   Projectile: {fileID: 3103277865896296911, guid: 7089166b94f1bf047ba49b8ebe60d37c, type: 3}

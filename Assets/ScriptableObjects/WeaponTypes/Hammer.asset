@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: 
   Name: hammer
+  Hint: 'Senjata tumpul '

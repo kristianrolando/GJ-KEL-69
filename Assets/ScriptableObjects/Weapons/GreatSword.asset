@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: GreatSword
   m_EditorClassIdentifier: 
   Name: GreatSword
+  Hint: Apakah senjata itu besar?
   weaponSprite: {fileID: 21300000, guid: 633fe59466be89c458b3ab57520af5c5, type: 3}
   Type: 0
   AttackType: 1
   PhysicalDamage: 180
   MagicDamage: 0
   Accuracy: 0.6
-  spriteFixedPosition: {x: 1.8600001, y: 0.33, z: 0}
-  spriteFixedRotation: {x: 0, y: 0, z: -0.16370255, w: 0.98650974}
   Projectile: {fileID: 0}

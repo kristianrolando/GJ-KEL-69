@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Bow
   m_EditorClassIdentifier: 
   Name: Bow
+  Hint: Apakah senjata itu lebih cepat digunakan?
   weaponSprite: {fileID: 21300000, guid: 985c8d6220b75dd45b581f122cc5dd16, type: 3}
   Type: 1
   AttackType: 2
   PhysicalDamage: 0
   MagicDamage: 0
   Accuracy: 0.9
-  spriteFixedPosition: {x: 1.05, y: -0.38, z: 0}
-  spriteFixedRotation: {x: 0, y: 0, z: -0.13495018, w: 0.9908524}
   Projectile: {fileID: 3103277865896296911, guid: abc6e636105ff914dbe4431685d30182, type: 3}

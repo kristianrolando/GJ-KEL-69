@@ -12,9 +12,9 @@ namespace GameJam.Battle
         // Variables
         //==============================================================================
         [SerializeField] public string Name;
+        [TextArea] [SerializeField] public string Hint;
         [SerializeField] public RaceSO Race;
         [SerializeField] public WeaponSO Weapon;
         [SerializeField] public ArmourSO Armour;
-        [TextArea] [SerializeField] public string Hint;
     }
 }

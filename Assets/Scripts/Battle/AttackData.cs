@@ -68,15 +68,7 @@ namespace GameJam.Battle
             AttackType playerAttackType = entityStatus.Weapon.AttackType;
             ArmourType enemyArmourType = entityStatus.AttackTarget.Armour.Type;
 
-            if (playerAttackType == AttackType.Blunt && enemyArmourType == ArmourType.Heavy)
-            {
-                Damage *= bluntAttackMultiplier;
-            }
-
-            if (playerAttackType == AttackType.Blunt && enemyArmourType == ArmourType.Light)
-            {
-                Damage *= bluntAttackPenalty;
-            }
+            // if (playerAttackType == AttackType.)
         }
 
 

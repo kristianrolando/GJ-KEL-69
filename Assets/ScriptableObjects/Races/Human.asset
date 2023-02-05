@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Human
   m_EditorClassIdentifier: 
   Name: Human
+  Hint: Mahluk yang dikenal atas kecerdasannya
   raceSprite: {fileID: 21300000, guid: bbd16d8ccaa98124cba7d217f6def284, type: 3}
   HealthPoint: 1800
   PhysicalAttack: 40

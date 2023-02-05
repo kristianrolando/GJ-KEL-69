@@ -12,5 +12,6 @@ namespace GameJam.Battle
         // Variables
         //==============================================================================
         [SerializeField] public string Name;
+        [TextArea] [SerializeField] public string Hint;
     }
 }
