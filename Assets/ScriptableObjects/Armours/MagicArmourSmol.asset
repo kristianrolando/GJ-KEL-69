@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbec77c9f28543d4387294f3127d985b, type: 3}
+  m_Name: MagicArmourSmol
+  m_EditorClassIdentifier: 
+  Name: Magic Armour
+  Hint: Apakah kakek buyutmu adalah seorang Penyihir ?
+  armourSprite: {fileID: 21300000, guid: 8d2acf33e74411149b5e715b46baa715, type: 3}
+  Type: 3
+  Weight: 0
+  PhysicalResistance: 0
+  MagicalResistance: 0
