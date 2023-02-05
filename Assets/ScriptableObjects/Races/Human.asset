@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Human
   raceSprite: {fileID: 21300000, guid: bbd16d8ccaa98124cba7d217f6def284, type: 3}
-  HealthPoint: 180
+  HealthPoint: 1800
   PhysicalAttack: 40
   MagicAttack: 300
   PhysicalDefense: 60

@@ -19,6 +19,7 @@ namespace GameJam.Battle
         [SerializeField] private GameObject attackDataPrefab;
         [SerializeField] private GameObject attackLog;
         [SerializeField] private string gameSceneName;
+        [SerializeField] private StageController stageController;
 
         [SerializeField] GameObject gameOverPanel;
 
@@ -27,7 +28,7 @@ namespace GameJam.Battle
         //==============================================================================
         private void Start()
         {
-            StageController.InitiateStage(player, enemy);
+            stageController.InitiateStage(player, enemy);
         }
 
 
