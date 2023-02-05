@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62e2a9aacfca3547980f5f5eb761d3c, type: 3}
   m_Name: GoblinWarlord
   m_EditorClassIdentifier: 
-  Name: GoblinWarlord
+  Name: Goblin Warlord
   Hint: 
   Race: {fileID: 11400000, guid: 86d5273f6006a2b47b4b90fc193b5525, type: 2}
   Weapon: {fileID: 11400000, guid: 8a7f5e90b5348004fa4aff009b9ee432, type: 2}
-  Armour: {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+  Armour: {fileID: 11400000, guid: ba10df99cf39cd24f8cd5ac8f9da9f64, type: 2}

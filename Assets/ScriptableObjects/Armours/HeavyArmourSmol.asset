@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Heavy Armour
   Hint: Apakah kakek buyutmu adalah seorang yang berbadan besar ?
-  armourSprite: {fileID: 21300000, guid: 5dc5d00546bbb34489833750fdbeff40, type: 3}
+  armourSprite: {fileID: 21300000, guid: 5658da04b9efb594e9a13c5930b4f282, type: 3}
   Type: 0
   Weight: 0
   PhysicalResistance: 0

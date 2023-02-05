@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SelectionScene.unity
-    guid: 9e76d5b2d9f94434b849c214299c9cef
-  - enabled: 1
-    path: Assets/Scenes/MergeScene.unity
-    guid: 5cb47881984a42d488acd4e0cc2fd87d
-  - enabled: 1
     path: Assets/Scenes/MainMenuScene.unity
     guid: a2611e52444cc2542992ad76821b17c5
   - enabled: 1
+    path: Assets/Scenes/MergeScene.unity
+    guid: 5cb47881984a42d488acd4e0cc2fd87d
+  - enabled: 0
+    path: Assets/Scenes/SelectionScene.unity
+    guid: 9e76d5b2d9f94434b849c214299c9cef
+  - enabled: 0
     path: Assets/Scenes/Battle.unity
     guid: 53f17c6bdc440bc46bcc9211d1645f17
   m_configObjects: {}

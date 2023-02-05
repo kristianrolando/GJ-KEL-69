@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b62e2a9aacfca3547980f5f5eb761d3c, type: 3}
-  m_Name: ArchWizard
+  m_Name: WarDwarf
   m_EditorClassIdentifier: 
-  Name: Arch Wizard
+  Name: War Dwarf
   Hint: 
-  Race: {fileID: 11400000, guid: 7afb9af2827e43c44af69cd95701250c, type: 2}
-  Weapon: {fileID: 11400000, guid: 79bec4fe624a86347838332f571ac808, type: 2}
-  Armour: {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
+  Race: {fileID: 11400000, guid: 71dc63243f0e1ba4885eb5aae06abd60, type: 2}
+  Weapon: {fileID: 11400000, guid: f419bf200acba49489dd9c048893fe2a, type: 2}
+  Armour: {fileID: 11400000, guid: ba10df99cf39cd24f8cd5ac8f9da9f64, type: 2}

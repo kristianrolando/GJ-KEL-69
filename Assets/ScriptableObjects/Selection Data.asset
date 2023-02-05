@@ -76,51 +76,33 @@ MonoBehaviour:
 
 '
   selectionArmour:
-  - nameBundle: battleaxe
+  - nameBundle: Dwarf
     armour:
+    - {fileID: 11400000, guid: ba10df99cf39cd24f8cd5ac8f9da9f64, type: 2}
+    - {fileID: 11400000, guid: dc3c3ec01a41e3b4eaa190fbac5962fb, type: 2}
+    - {fileID: 11400000, guid: 0e74b4e46eac7c24fbf8b539a9f5fbfa, type: 2}
+    - {fileID: 11400000, guid: 21173187334b95b4e815dff9d260ada8, type: 2}
+  - nameBundle: Elf
+    armour:
+    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
     - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
-    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  - nameBundle: bow
-    armour:
-    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
     - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
-  - nameBundle: claws
+  - nameBundle: Goblin
+    armour:
+    - {fileID: 11400000, guid: ba10df99cf39cd24f8cd5ac8f9da9f64, type: 2}
+    - {fileID: 11400000, guid: dc3c3ec01a41e3b4eaa190fbac5962fb, type: 2}
+    - {fileID: 11400000, guid: 0e74b4e46eac7c24fbf8b539a9f5fbfa, type: 2}
+    - {fileID: 11400000, guid: 21173187334b95b4e815dff9d260ada8, type: 2}
+  - nameBundle: Human
     armour:
     - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
-    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
-  - nameBundle: crossbow
-    armour:
-    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  - nameBundle: greatsword
-    armour:
-    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
     - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
-  - nameBundle: halberd
-    armour:
     - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
+  - nameBundle: Orc
+    armour:
     - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
-  - nameBundle: lance
-    armour:
-    - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
     - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  - nameBundle: orbs
-    armour:
     - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
-    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  - nameBundle: rod
-    armour:
     - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
-    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
-  - nameBundle: sledgehammer
-    armour:
-    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
-    - {fileID: 11400000, guid: d7eb902aa11090a47a0603691160eb32, type: 2}
-  - nameBundle: throwingaxe
-    armour:
-    - {fileID: 11400000, guid: 104deceb6161d134f9ffd604c2523c74, type: 2}
-    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
-  - nameBundle: tonfa
-    armour:
-    - {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
-    - {fileID: 11400000, guid: d0166afa058b81442933db2970f2a05d, type: 2}
