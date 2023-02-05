@@ -17,5 +17,6 @@ namespace GameJam.Battle
         [SerializeField] public ArmourType Type;
         [SerializeField] public float Weight;
         [SerializeField] public float PhysicalResistance;
+        [SerializeField] public float MagicalResistance;
     }
 }

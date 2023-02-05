@@ -19,6 +19,7 @@ namespace GameJam.Battle
         [SerializeField] public float PhysicalDamage;
         [SerializeField] public float MagicDamage;
         [SerializeField] public float Accuracy;
+        [SerializeField] public float damageBonus;
         [Header("Only fill if weapon has projectile")]
         [SerializeField] public GameObject Projectile;
     }

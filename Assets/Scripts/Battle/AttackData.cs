@@ -17,18 +17,6 @@ namespace GameJam.Battle
         [SerializeField] public DamageType damageType;
         [SerializeField] public GameObject Attacker;
 
-        [Header("Multipliers")]
-        [SerializeField] private float bluntAttackMultiplier = 2f;
-        // [SerializeField] private float slashAttackMultiplier = 2f;
-        // [SerializeField] private float pierceAttackMultiplier = 2f;
-
-        [Header("Penalties")]
-        [SerializeField] private float bluntAttackPenalty = 0.8f;
-        // [SerializeField] private float slashAttackPenalty = 0.8f;
-        // [SerializeField] private float pierceAttackPenalty = 0.8f;
-
-
-
         //==============================================================================
         // Functions
         //==============================================================================
@@ -43,8 +31,10 @@ namespace GameJam.Battle
 
         private void CalculateTotalDamage()
         {
-            CalculatePhysical();
-            //CalculateWeaponTypeMultiplier();
+            if (entityStatus.Weapon.AttackType == AttackType.Magic) CalculateMagical();
+            else CalculatePhysical();
+
+            CalculateWeaponTypeMultiplier();
             CalculateMiss();
             CalculateDodge();
         }
@@ -55,10 +45,30 @@ namespace GameJam.Battle
         {
             float targetPhysicalResistance = entityStatus.AttackTarget.Armour.PhysicalResistance + entityStatus.Race.PhysicalDefense;
             float attackerPhysicalDamage = entityStatus.Weapon.PhysicalDamage + entityStatus.Race.PhysicalAttack;
-            Damage = attackerPhysicalDamage - targetPhysicalResistance;
+            float randomDamageBonus = attackerPhysicalDamage *= 0.1f;
+
+            randomDamageBonus = Random.Range(0f, randomDamageBonus);
+
+            Damage = attackerPhysicalDamage - targetPhysicalResistance + randomDamageBonus;
             if (Damage < 0) Damage = 1;
 
             damageType = DamageType.Physical;
+        }
+
+
+
+        private void CalculateMagical()
+        {
+            float targetMagicalResistance = entityStatus.AttackTarget.Armour.MagicalResistance + entityStatus.Race.MagicDefense;
+            float attackerMagicalDamage = entityStatus.Weapon.MagicDamage + entityStatus.Race.MagicAttack;
+            float randomDamageBonus = attackerMagicalDamage *= 0.1f;
+
+            randomDamageBonus = Random.Range(0f, randomDamageBonus);
+
+            Damage = attackerMagicalDamage - targetMagicalResistance + randomDamageBonus;
+            if (Damage < 0) Damage = 1;
+
+            damageType = DamageType.Magical;
         }
 
 
@@ -68,7 +78,13 @@ namespace GameJam.Battle
             AttackType playerAttackType = entityStatus.Weapon.AttackType;
             ArmourType enemyArmourType = entityStatus.AttackTarget.Armour.Type;
 
-            // if (playerAttackType == AttackType.)
+            if (playerAttackType == AttackType.Slash && enemyArmourType == ArmourType.Light) Damage *= entityStatus.Weapon.damageBonus;
+            if (playerAttackType == AttackType.Blunt && enemyArmourType == ArmourType.Light) Damage /= 2;
+            if (playerAttackType == AttackType.Pierce && enemyArmourType == ArmourType.Medium) Damage *= entityStatus.Weapon.damageBonus;
+            if (playerAttackType == AttackType.Slash && enemyArmourType == ArmourType.Medium) Damage /= 2;
+            if (playerAttackType == AttackType.Blunt && enemyArmourType == ArmourType.Heavy) Damage *= entityStatus.Weapon.damageBonus;
+            if (playerAttackType == AttackType.Pierce && enemyArmourType == ArmourType.Heavy) Damage /= 2;
+            if (playerAttackType == AttackType.Magic && enemyArmourType == ArmourType.Magic) Damage /= 2;
         }
 
 

@@ -140,6 +140,13 @@ namespace GameJam.Battle
                 damageText.color = new Color(255f, 0f, 0f, damageText.color.a);
             }
 
+            if (_damageData.damageType == DamageType.Magical)
+            {
+                int damageFloored = (int)_damageData.damage;
+                damageText.text = damageFloored.ToString();
+                damageText.color = new Color(255f, 0f, 255f, damageText.color.a);
+            }
+
             if (_damageData.damage > 0)
             {
                 Animator.SetTrigger("Hurt");

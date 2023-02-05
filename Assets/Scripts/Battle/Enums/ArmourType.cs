@@ -6,6 +6,8 @@ namespace GameJam.Battle
     public enum ArmourType
     {
         Heavy,
-        Light
+        Medium,
+        Light,
+        Magic
     }
 }
