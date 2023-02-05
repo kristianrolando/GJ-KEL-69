@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: MediumArmour
   m_EditorClassIdentifier: 
   Name: Medium Armour
-  Hint: 
+  Hint: Apakah kakek buyutmu adalah seorang ksatria ?
   armourSprite: {fileID: 21300000, guid: 8f215ecccf2184e458989f1c548ffc7b, type: 3}
   Type: 0
   Weight: 0
   PhysicalResistance: 5
+  MagicalResistance: 0

@@ -11,6 +11,12 @@ namespace GameJam.Battle
         // Variables
         //==============================================================================
         private EntityStatus entityStatus;
+        public float baseDamage;
+        public float damagePlusMultiplier;
+        public float physicalDamage;
+        public float physicalResistance;
+        public float weaponDamage;
+        public float RaceDamage;
 
         [Header("Attack Data")]
         [SerializeField] public float Damage;
@@ -45,7 +51,7 @@ namespace GameJam.Battle
         {
             float targetPhysicalResistance = entityStatus.AttackTarget.Armour.PhysicalResistance + entityStatus.Race.PhysicalDefense;
             float attackerPhysicalDamage = entityStatus.Weapon.PhysicalDamage + entityStatus.Race.PhysicalAttack;
-            float randomDamageBonus = attackerPhysicalDamage *= 0.1f;
+            float randomDamageBonus = attackerPhysicalDamage * 0.1f;
 
             randomDamageBonus = Random.Range(0f, randomDamageBonus);
 
@@ -53,6 +59,12 @@ namespace GameJam.Battle
             if (Damage < 0) Damage = 1;
 
             damageType = DamageType.Physical;
+
+            baseDamage = Damage;
+            physicalDamage = attackerPhysicalDamage;
+            physicalResistance = targetPhysicalResistance;
+            weaponDamage = entityStatus.Weapon.PhysicalDamage;
+            RaceDamage = entityStatus.Race.PhysicalAttack;
         }
 
 
@@ -66,9 +78,11 @@ namespace GameJam.Battle
             randomDamageBonus = Random.Range(0f, randomDamageBonus);
 
             Damage = attackerMagicalDamage - targetMagicalResistance + randomDamageBonus;
-            if (Damage < 0) Damage = 1;
+            //if (Damage < 0) Damage = 1;
 
             damageType = DamageType.Magical;
+
+            baseDamage = Damage;
         }
 
 
@@ -85,6 +99,8 @@ namespace GameJam.Battle
             if (playerAttackType == AttackType.Blunt && enemyArmourType == ArmourType.Heavy) Damage *= entityStatus.Weapon.damageBonus;
             if (playerAttackType == AttackType.Pierce && enemyArmourType == ArmourType.Heavy) Damage /= 2;
             if (playerAttackType == AttackType.Magic && enemyArmourType == ArmourType.Magic) Damage /= 2;
+
+            damagePlusMultiplier = Damage;
         }
 
 

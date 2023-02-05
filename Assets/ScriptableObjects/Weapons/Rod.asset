@@ -20,4 +20,5 @@ MonoBehaviour:
   PhysicalDamage: 0
   MagicDamage: 240
   Accuracy: 0.8
+  damageBonus: 2
   Projectile: {fileID: 0}
