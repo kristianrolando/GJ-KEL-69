@@ -20,7 +20,7 @@ namespace GameJam.Battle
         [SerializeField] private GameObject attackLog;
         [SerializeField] private string gameSceneName;
 
-
+        [SerializeField] GameObject gameOverPanel;
 
         //==============================================================================
         // Functions
@@ -96,8 +96,15 @@ namespace GameJam.Battle
         {
             if (enemy.HealthPoint <= 0 || player.HealthPoint <= 0)
             {
-                if (enemy.HealthPoint > player.HealthPoint) StageController.OnPlayerDeath();
-                else StageController.OnEnemyDeath(gameSceneName);
+                if (enemy.HealthPoint > player.HealthPoint)
+                {
+                    StageController.OnPlayerDeath();
+                    gameOverPanel.SetActive(true);
+                }
+                else
+                {
+                    StageController.OnEnemyDeath(gameSceneName);
+                }
 
                 gameObject.GetComponent<BattleController>().enabled = false;
             }

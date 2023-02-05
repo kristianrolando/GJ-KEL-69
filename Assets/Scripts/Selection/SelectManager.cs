@@ -37,7 +37,7 @@ namespace GJ.Selection
         }
         public void ManagerBattle()
         {
-            StatePage(PageState.battlePage);
+            StartCoroutine(BattlePageDelay(2f));
         }
         void StatePage(PageState state)
         {
@@ -64,6 +64,11 @@ namespace GJ.Selection
         {
             yield return new WaitForSeconds(time);
             StatePage(PageState.selectionPage);
+        }
+        IEnumerator BattlePageDelay(float time)
+        {
+            yield return new WaitForSeconds(time);
+            StatePage(PageState.battlePage);
         }
         void SetActiveObjBattle(bool isActive)
         {

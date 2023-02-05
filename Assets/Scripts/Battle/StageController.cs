@@ -15,6 +15,7 @@ namespace GameJam.Battle
         public static void OnPlayerDeath()
         {
             SetHighScore();
+            
         }
 
 

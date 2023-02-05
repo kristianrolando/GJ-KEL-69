@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -642,9 +643,12 @@ MonoBehaviour:
   HealthPoint: 0
   Race: {fileID: 11400000, guid: 86d5273f6006a2b47b4b90fc193b5525, type: 2}
   Animator: {fileID: 0}
-  AttackTarget: {fileID: 761584160}
   Weapon: {fileID: 11400000, guid: 90b46cefbde85be43992cd6ffb4ff2db, type: 2}
   Armour: {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+  RaceSlot: {fileID: 0}
+  WeaponSlot: {fileID: 0}
+  ArmourSlot: {fileID: 0}
+  AttackTarget: {fileID: 761584160}
   weaponTransform: {fileID: 42634677}
   damageText: {fileID: 688141438}
   healthSlider: {fileID: 0}
@@ -697,7 +701,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &269518522
@@ -946,6 +950,7 @@ MonoBehaviour:
   enemy: {fileID: 761584160}
   attackDataPrefab: {fileID: 4426786376181127115, guid: da7747bbde81cdf43a7eba5c75b6e6af, type: 3}
   attackLog: {fileID: 936155597}
+  gameSceneName: 
 --- !u!1 &424570840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,9 +1477,12 @@ MonoBehaviour:
   HealthPoint: 0
   Race: {fileID: 11400000, guid: 25718e8d184676b4eb2d1711bde9a5a2, type: 2}
   Animator: {fileID: 0}
-  AttackTarget: {fileID: 269518520}
   Weapon: {fileID: 11400000, guid: 2b39e818593d1604b8b1d5122cad455c, type: 2}
   Armour: {fileID: 11400000, guid: 3a1f8f2edb2bd364bbebdf44be088273, type: 2}
+  RaceSlot: {fileID: 0}
+  WeaponSlot: {fileID: 0}
+  ArmourSlot: {fileID: 0}
+  AttackTarget: {fileID: 269518520}
   weaponTransform: {fileID: 1989594686}
   damageText: {fileID: 1730712826}
   healthSlider: {fileID: 0}
@@ -1527,7 +1535,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &761584162
