@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Dwarf
   Hint: "Mahluk yang dikenal atas obsesinya atas emas \r\n(the hobbit) \r"
-  raceSprite: {fileID: 21300000, guid: 4b05e7ac41e873e4ab26d40c93dc2937, type: 3}
+  raceSprite: {fileID: 21300000, guid: 15b6cc27d5c2dcf4192ffb9c480c992a, type: 3}
   HealthPoint: 2400
   PhysicalAttack: 200
   MagicAttack: 0
